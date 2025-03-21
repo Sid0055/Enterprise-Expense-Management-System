@@ -108,11 +108,11 @@ const ExpenseProvider = ({ children }) => {
       };
       setExpenses([...expenses, newExpense]);
     }
+    
+    // Reset form
+    setFormData({ category: "", amount: "", date: "", description: "" });
+    setExpenseFormVisible(false);
   };
-
-  // Reset form
-  setFormData({ category: "", amount: "", date: "", description: "" });
-  setExpenseFormVisible(false);
 
   // Handle edit expense
   const handleEdit = (expense) => {
